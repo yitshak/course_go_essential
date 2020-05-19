@@ -1,0 +1,21 @@
+2020/05/19 06:47:28 open no-such-file: no such file or directory
+Cannot open pidFile: 
+main.killServer
+	/home/runner/go-essential/ServerKill.go:22
+main.main
+	/home/runner/go-essential/ServerKill.go:43
+runtime.main
+	/usr/lib/go-1.14/src/runtime/proc.go:203
+runtime.goexit
+	/usr/lib/go-1.14/src/runtime/asm_amd64.s:1373
+2020/05/19 06:47:28 strconv.Atoi: parsing "hjk\n": invalid syntax
+Cannot convert string to pid number 
+main.killServer
+	/home/runner/go-essential/ServerKill.go:26
+main.main
+	/home/runner/go-essential/ServerKill.go:47
+runtime.main
+	/usr/lib/go-1.14/src/runtime/proc.go:203
+runtime.goexit
+	/usr/lib/go-1.14/src/runtime/asm_amd64.s:1373
+2020/05/19 06:47:28 <nil>

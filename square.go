@@ -15,18 +15,21 @@ func (p *Point) Move(dx int,dy int){
 
 type Square struct {
   center Point
-  length uint 
+  length int 
 }
 
 func (s *Square)Move(dx int,dy int){
   s.center.Move(dx, dy)
 }
 
-func (s Square)Area() uint{
+func (s Square)Area() int{
   return s.length*s.length
 }
 
-func NewSquare(x int, y int, length uint) (*Square, error){
+func NewSquare(x int, y int, length int) (*Square, error){
+  if length < 0 {
+    return nil, fmt.Errorf("Negative length is invalid.")
+  }
   center := Point{x,y}
   square := Square{center,length}
 
@@ -43,8 +46,15 @@ func main() {
   if err!=nil{
     fmt.Printf("Error: %v\n",err)
   }
+  
   fmt.Printf(square_a.String())
   square_a.Move(4, -7)
   fmt.Printf(square_a.String())
+
+  _ , err = NewSquare(40,-50,-12)
+  if err!=nil{
+    fmt.Printf("Error: %v\n",err)
+  }
+  
   
 }
